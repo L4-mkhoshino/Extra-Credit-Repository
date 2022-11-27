@@ -92,22 +92,38 @@ nw_order -c n ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile | nw_top
 This switches the format of the tree to a cladogram. 
 
 # Lab 6
-
+```bash
+cd ~/labs/lab6-$MYGIT/mygene
+```
+This opens the mygene folder.
+```bash
+ls ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile  
+```
+This is to make sure that the midpoint rooted tree is within the mygene folder.
+```bash
+cp ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile
+```
+This copies the midpoint rooted tree lab5 to lab6.
 ```bash 
 java -jar ~/tools/Notung-3.0-beta/Notung-3.0-beta.jar -s ~/labs/lab5-$MYGIT/species.tre -g ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/labs/lab6-$MYGIT/mygene/
 ```
-
+This reconciles the gene tree and species tree using notung.
+```bash
+nw_display ~/labs/lab5-$MYGIT/species.tre
+```
+This displays the species tree in newick format.
 ```bash
 grep NOTUNG-SPECIES-TREE ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled | sed -e "s/^\[&&NOTUNG-SPECIES-TREE//" -e "s/\]/;/" | nw_display -
 ```
-
+Using notung, this allows us to view the assigned names of the internal nodes of the tree.
 ```bash
 python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled --include.species
 ```
-
+This converts the format of the reconciled tree into RecPhyloXML format. 
 ```bash
 thirdkind -Iie -D 40 -f ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled.xml -o  ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled.svg
 ```
+This uses thirdkind to view the reconciled tree. 
 
 # Lab 8
 
