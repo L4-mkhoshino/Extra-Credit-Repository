@@ -53,42 +53,43 @@ This uses alignbuddy to calculate the average percent identity.
 ```bash
 mkdir ~/labs/lab5-$MYGIT/mygene
 ```
-
+This created a mygene folder within the lab5 directory.
 ```bash
 cd ~/labs/lab5-$MYGIT/mygene
 ```
-
+This takes us into the mygene folder.
 ```bash
 cp ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas
 ```
-
+This copied the files containing the sequences and alignments from lab 4 into the mygene folder in lab5.
 ```bash
 iqtree -s ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas -bb 1000 -nt 2
 ```
-
+This command employs IQTree to find the maximum likelihood tree estimate. 
 ```bash
 nw_display ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas.treefile
 ```
-
+This allows us to view the ASCII graphic produced by IQTree.
 ```bash
 Rscript --vanilla ~/labs/lab5-$MYGIT/plotUnrooted.R  ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas.treefile ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas.treefile.pdf 0.4
 ```
-
+This reformats the tree produced by IQTree as an unrooted tree. 
 ```bash
 gotree reroot midpoint -i ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.fas.treefile -o ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile
 ```
-
+This uses gotree to reroot the tree into being a midpoint rooted tree. 
 ```bash
 nw_order -c n ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile  | nw_display -
 ```
-
+This shows the midpoint rooted tree in ASCII format.
 ```bash
 nw_order -c n ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile | nw_display -w 1000 -b 'opacity:0' -s  >  ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile.svg -
 ```
-
+This outputs the generated tree as a .svg graphic.
 ```bash
 nw_order -c n ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile | nw_topology - | nw_display -s  -w 1000 > ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.midCl.treefile.svg -
 ```
+This switches the format of the tree to a cladogram. 
 
 # Lab 6
 
