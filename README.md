@@ -2,16 +2,52 @@
 **Maia Hoshino BIO 312 Extra Credit**
 # Lab 4
 ```bash
+mkdir ~/labs/lab4-$MYGIT/mygene
+```
+This command made a folder for mygene within the lab4 directory.
+```bash
+cd ~/labs/lab4-$MYGIT/mygene
+```
+This command takes us into the mygene folder within the lab4 directory.
+```bash
 seqkit grep --pattern-file ~/labs/lab3-$MYGIT/mygene/mygene.blastp.detail.filtered.out ~/labs/lab3-$MYGIT/allprotein.fas > ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas
 ```
-
+Using seqkit, the sequences of mygene from the BLAST output file were obtained and put into the lab4 directory within the mygene folder. 
 ```bash
 muscle -in ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas -out ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas
 ```
-
+This command uses muscle to create a multiple sequence alignment using the sequences from the BLAST output file. 
 ```bash
 alv -kli  ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | less -RS
 ```
+This allows us to view the alignment using alv. 
+```bash
+alv -ki -w 100 ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | aha > ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.html
+a2ps -r --columns=1 ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.html -o ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.ps
+ps2pdf ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.ps ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.pdf
+```
+This set of commands allowed us to convert the multiple sequence alignment to a pdf, using alv to view it. 
+```bash
+alignbuddy  -al  ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas
+```
+This calculated the width of the alignment.
+```bash
+alignbuddy -trm all  ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | alignbuddy  -al
+```
+This calculated the width of the alignments after removing gaps.
+```bash
+alignbuddy -dinv 'ambig' ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | alignbuddy  -al
+```
+This outputs the width of the alignment after removing completely conserved areas.
+```bash
+t_coffee -other_pg seq_reformat -in ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas -output sim
+```
+This uses t_coffee to find the average percent identity.
+```bash
+alignbuddy -pi ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
+     END{ print(100*sum/num) } '
+```
+This uses alignbuddy to calculate the average percent identity. 
 
 # Lab 5
 ```bash
