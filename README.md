@@ -1,5 +1,18 @@
 # Extra-Credit-Repository
 **Maia Hoshino BIO 312 Extra Credit**
+# Lab 4
+```bash
+seqkit grep --pattern-file ~/labs/lab3-$MYGIT/mygene/mygene.blastp.detail.filtered.out ~/labs/lab3-$MYGIT/allprotein.fas > ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas
+```
+
+```bash
+muscle -in ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas -out ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas
+```
+
+```bash
+alv -kli  ~/labs/lab4-$MYGIT/mygene/mygene.homologs.al.fas | less -RS
+```
+
 # Lab 5
 ```bash
 mkdir ~/labs/lab5-$MYGIT/mygene
@@ -57,4 +70,46 @@ python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/labs/lab6-$MYGI
 
 ```bash
 thirdkind -Iie -D 40 -f ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled.xml -o  ~/labs/lab6-$MYGIT/mygene/mygene.homologs.al.mid.treefile.reconciled.svg
+```
+
+# Lab 8
+
+```bash
+mkdir ~/labs/lab8-$MYGIT/mygene
+```
+
+```bash
+cd ~/labs/lab8-$MYGIT/mygene
+```
+
+```bash
+sed 's/*//' ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas > ~/labs/lab8-$MYGIT/mygene/mygene.homologs.fas
+```
+
+```bash
+rpsblast -query ~/labs/lab8-$MYGIT/mygene/mygene.homologs.fas -db ~/data/Pfam -out ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out  -outfmt "6 qseqid qlen qstart qend evalue stitle" -evalue .0000000001
+```
+
+```bash
+mlr --inidx --ifs "\t" --opprint  cat ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out | tail -n +2 | less -S
+```
+
+```bash
+cut -f 6 ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out | sort | uniq -c
+```
+
+```bash
+cut -f 1 ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out | sort | uniq -c
+```
+
+```bash
+awk '{a=$4-$3;print $1,'\t',a;}' ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out |  sort  -k2nr
+```
+
+```bash
+sort  -k5rg ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out | less -S
+```
+
+```bash
+sudo /usr/local/bin/Rscript  --vanilla ~/labs/lab8-$MYGIT/plotTreeAndDomains.r ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out ~/labs/lab8-$MYGIT/mygene/mygene.tree.rps.pdf
 ```
