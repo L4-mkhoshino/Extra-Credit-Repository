@@ -1,0 +1,275 @@
+IQ-TREE multicore version 2.1.1 COVID-edition for Linux 64-bit built Aug 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ip-172-31-3-75.ec2.internal (AVX2, FMA3, 7 GB RAM)
+Command: iqtree -s /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas -bb 1000 -nt 2
+Seed:    758925 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Sep 21 22:42:23 2022
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading alignment file /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 32 sequences with 2497 columns, 995 distinct patterns
+436 parsimony-informative, 648 singleton sites, 1413 constant sites
+                                                    Gap/Ambiguity  Composition  p-value
+   1  Avaga.UJR31415.1_hypothetical_protein_I4U23_018908   39.89%    failed      0.00%
+   2  Egranulosus.XP_024353854.1_Calciumbinding_mitochon   86.66%    passed      7.85%
+   3  Egranulosus.XP_024348887.1_Calciumbinding_mitochon   44.45%    failed      0.00%
+   4  Avaga.UJR13457.1_hypothetical_protein_I4U23_000471   88.23%    passed     36.85%
+   5  Avaga.UJR23030.1_hypothetical_protein_I4U23_026056   80.30%    passed     52.42%
+   6  Avaga.UJR25868.1_hypothetical_protein_I4U23_007218   80.14%    passed     74.53%
+   7  Egranulosus.XP_024349898.1_Calciumbinding_mitochon   81.22%    passed     23.00%
+   8  Hsapiens.NP_775908.2_mitochondrial_carrier_protein   85.18%    failed      0.49%
+   9  Lanatina.XP_013394192.1_calciumbinding_mitochondri   80.90%    failed      1.70%
+  10  Hsapiens.NP_037518.3_calcium-binding_mitochondrial   80.90%    passed      5.95%
+  11  Hsapiens.NP_001317917.1_calcium-binding_mitochondr   79.38%    passed     56.77%
+  12  Hsapiens.NP_077008.2_calcium-binding_mitochondrial   81.26%    failed      1.47%
+  13  Dmelanogaster.SCaMC_short_Calciumbinding_mitochond   76.65%    passed     11.24%
+  14  Cintestinalis.LOC100186688_uncharacterized_protein   61.07%    failed      0.48%
+  15  Myessoensis.XP_021372793.1_calciumbinding_mitochon   81.34%    passed     37.25%
+  16  Aplanci.LOC110976327_calciumbinding_mitochondrial_   80.14%    passed     82.13%
+  17  Bbelcheri.LOC109482499_calciumbinding_mitochondria   79.09%    passed     12.04%
+  18  Bbelcheri.LOC109467967_solute_carrier_family_25_me   85.66%    passed      7.15%
+  19  Egranulosus.XP_024353850.1_Solute_carrier_family_2   86.66%    passed     48.63%
+  20  Avaga.UJR35750.1_hypothetical_protein_I4U23_028499   87.79%    passed     26.50%
+  21  Dmelanogaster.DPCoAC_dephosphocoenzyme_A_carrier_i   85.38%    failed      0.25%
+  22  Aplanci.LOC110984196_mitochondrial_coenzyme_A_tran   85.66%    passed     32.04%
+  23  Myessoensis.XP_021355166.1_mitochondrial_coenzyme_   85.58%    passed     89.80%
+  24  Lanatina.XP_013386564.1_mitochondrial_coenzyme_A_t   85.74%    passed     38.68%
+  25  Hsapiens.NP_848621.2_mitochondrial_coenzyme_A_tran   87.26%    failed      2.06%
+  26  Bbelcheri.LOC109468737_mitochondrial_coenzyme_A_tr   86.98%    passed      9.84%
+  27  Aplanci.LOC110973531_graves_disease_carrier_protei   87.26%    passed      9.15%
+  28  Cintestinalis.LOC100180500_graves_disease_carrier_   87.34%    passed     86.27%
+  29  Lanatina.XP_013414919.1_graves_disease_carrier_pro   86.74%    passed     45.54%
+  30  Myessoensis.XP_021350602.1_graves_disease_carrier_   87.42%    passed     17.79%
+  31  Bbelcheri.LOC109481428_graves_disease_carrier_prot   83.90%    passed     47.54%
+  32  Hsapiens.NP_689920.1_graves_disease_carrier_protei   86.70%    failed      0.02%
+WARNING: 30 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                80.72%  9 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -30173.867
+2. Current log-likelihood: -30172.226
+Optimal log-likelihood: -30171.404
+Proportion of invariable sites: 0.012
+Gamma shape alpha: 1.131
+Parameters optimization took 2 rounds (0.200 sec)
+Time for fast ML tree search: 1.664 seconds
+
+NOTE: ModelFinder requires 54 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 2497) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            31260.910    61  62643.820    62646.926    62999.013
+  2  LG+I          31169.582    62  62463.164    62466.374    62824.181
+  3  LG+G4         30178.355    62  60480.710    60483.920    60841.727
+  4  LG+I+G4       30170.480    63  60466.961    60470.275    60833.800
+  5  LG+R2         30300.756    63  60727.512    60730.827    61094.352
+  6  LG+R3         30188.017    65  60506.035    60509.564    60884.520
+  7  LG+R4         30147.700    67  60429.400    60433.151    60819.531
+  8  LG+R5         30136.792    69  60411.584    60415.564    60813.360
+  9  LG+R6         30136.345    71  60414.690    60418.906    60828.112
+ 20  LG+F+R4       30112.539    86  60397.078    60403.287    60897.842
+ 21  LG+F+R5       30103.709    88  60383.418    60389.923    60895.828
+ 33  WAG+R4        30330.230    67  60794.459    60798.211    61184.590
+ 34  WAG+R5        30322.389    69  60782.778    60786.758    61184.554
+ 46  WAG+F+R4      30232.994    86  60637.988    60644.197    61138.753
+ 47  WAG+F+R5      30226.904    88  60629.808    60636.313    61142.219
+ 59  JTT+R4        30352.651    67  60839.302    60843.054    61229.433
+ 60  JTT+R5        30342.158    69  60822.316    60826.297    61224.093
+ 72  JTT+F+R4      30310.504    86  60793.008    60799.217    61293.773
+ 73  JTT+F+R5      30300.620    88  60777.241    60783.746    61289.651
+ 85  JTTDCMut+R4   30358.419    67  60850.838    60854.589    61240.968
+ 86  JTTDCMut+R5   30347.821    69  60833.641    60837.622    61235.418
+ 98  JTTDCMut+F+R4 30310.254    86  60792.509    60798.718    61293.274
+ 99  JTTDCMut+F+R5 30300.328    88  60776.656    60783.161    61289.067
+111  DCMut+R4      30622.467    67  61378.934    61382.686    61769.065
+112  DCMut+R5      30607.562    69  61353.124    61357.104    61754.900
+124  DCMut+F+R4    30394.333    86  60960.666    60966.875    61461.431
+125  DCMut+F+R5    30381.544    88  60939.087    60945.592    61451.498
+137  VT+R4         30282.784    67  60699.568    60703.319    61089.698
+138  VT+R5         30278.208    69  60694.415    60698.395    61096.192
+150  VT+F+R4       30252.476    86  60676.951    60683.160    61177.716
+151  VT+F+R5       30248.537    88  60673.074    60679.579    61185.485
+163  PMB+R4        30374.957    67  60883.915    60887.666    61274.046
+164  PMB+R5        30372.870    69  60883.741    60887.721    61285.517
+176  PMB+F+R4      30356.726    86  60885.452    60891.661    61386.217
+177  PMB+F+R5      30354.671    88  60885.342    60891.847    61397.752
+189  Blosum62+R4   30376.273    67  60886.547    60890.298    61276.677
+190  Blosum62+R5   30373.168    69  60884.336    60888.316    61286.112
+202  Blosum62+F+R4 30331.094    86  60834.187    60840.397    61334.952
+203  Blosum62+F+R5 30328.301    88  60832.601    60839.106    61345.011
+215  Dayhoff+R4    30622.211    67  61378.422    61382.173    61768.552
+216  Dayhoff+R5    30607.227    69  61352.454    61356.434    61754.230
+228  Dayhoff+F+R4  30394.071    86  60960.142    60966.351    61460.906
+229  Dayhoff+F+R5  30381.187    88  60938.375    60944.879    61450.785
+241  mtREV+R4      31630.497    67  63394.995    63398.746    63785.125
+242  mtREV+R5      31610.949    69  63359.897    63363.878    63761.674
+254  mtREV+F+R4    30519.847    86  61211.694    61217.903    61712.459
+255  mtREV+F+R5    30503.732    88  61183.465    61189.970    61695.875
+267  mtART+R4      31727.828    67  63589.655    63593.407    63979.786
+268  mtART+R5      31707.315    69  63552.629    63556.609    63954.406
+280  mtART+F+R4    30530.605    86  61233.210    61239.419    61733.975
+281  mtART+F+R5    30509.481    88  61194.962    61201.467    61707.373
+293  mtZOA+R4      31236.914    67  62607.827    62611.579    62997.958
+294  mtZOA+R5      31225.329    69  62588.658    62592.638    62990.434
+306  mtZOA+F+R4    30344.243    86  60860.485    60866.694    61361.250
+307  mtZOA+F+R5    30325.819    88  60827.639    60834.144    61340.049
+319  mtMet+R4      31620.063    67  63374.126    63377.877    63764.257
+320  mtMet+R5      31614.539    69  63367.079    63371.059    63768.855
+332  mtMet+F+R4    30464.215    86  61100.430    61106.639    61601.195
+333  mtMet+F+R5    30446.468    88  61068.936    61075.441    61581.346
+345  mtVer+R4      31907.624    67  63949.248    63953.000    64339.379
+346  mtVer+R5      31896.220    69  63930.440    63934.421    64332.217
+358  mtVer+F+R4    30782.405    86  61736.809    61743.018    62237.574
+359  mtVer+F+R5    30765.992    88  61707.985    61714.489    62220.395
+371  mtInv+R4      31896.933    67  63927.867    63931.618    64317.998
+372  mtInv+R5      31894.564    69  63927.127    63931.108    64328.904
+384  mtInv+F+R4    30318.624    86  60809.248    60815.457    61310.012
+385  mtInv+F+R5    30304.019    88  60784.039    60790.544    61296.449
+397  mtMAM+R4      32013.817    67  64161.635    64165.386    64551.765
+398  mtMAM+R5      31987.088    69  64112.176    64116.156    64513.953
+410  mtMAM+F+R4    30904.277    86  61980.554    61986.763    62481.319
+411  mtMAM+F+R5    30881.873    88  61939.747    61946.252    62452.157
+423  HIVb+R4       30782.929    67  61699.858    61703.610    62089.989
+424  HIVb+R5       30764.312    69  61666.625    61670.605    62068.401
+436  HIVb+F+R4     30625.136    86  61422.271    61428.480    61923.036
+437  HIVb+F+R5     30606.740    88  61389.480    61395.985    61901.891
+449  HIVw+R4       31903.285    67  63940.569    63944.320    64330.700
+450  HIVw+R5       31879.302    69  63896.603    63900.584    64298.380
+462  HIVw+F+R4     31206.399    86  62584.798    62591.007    63085.563
+463  HIVw+F+R5     31184.200    88  62544.400    62550.905    63056.810
+475  FLU+R4        30775.522    67  61685.043    61688.795    62075.174
+476  FLU+R5        30759.413    69  61656.825    61660.806    62058.602
+488  FLU+F+R4      30572.344    86  61316.688    61322.897    61817.453
+489  FLU+F+R5      30554.746    88  61285.493    61291.998    61797.903
+501  rtREV+R4      30421.224    67  60976.448    60980.199    61366.579
+502  rtREV+R5      30409.562    69  60957.123    60961.104    61358.900
+514  rtREV+F+R4    30201.655    86  60575.311    60581.520    61076.075
+515  rtREV+F+R5    30192.991    88  60561.982    60568.487    61074.393
+527  cpREV+R4      30441.441    67  61016.882    61020.634    61407.013
+528  cpREV+R5      30434.137    69  61006.274    61010.254    61408.050
+540  cpREV+F+R4    30343.839    86  60859.677    60865.886    61360.442
+541  cpREV+F+R5    30335.259    88  60846.517    60853.022    61358.928
+Akaike Information Criterion:           LG+F+R5
+Corrected Akaike Information Criterion: LG+F+R5
+Bayesian Information Criterion:         LG+R5
+Best-fit model: LG+R5 chosen according to BIC
+
+All model information printed to /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.model.gz
+CPU time for ModelFinder: 372.191 seconds (0h:6m:12s)
+Wall-clock time for ModelFinder: 187.304 seconds (0h:3m:7s)
+Generating 1000 samples for ultrafast bootstrap (seed: 758925)...
+
+NOTE: 29 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -30136.792
+Optimal log-likelihood: -30136.744
+Site proportion and rates:  (0.053,0.043) (0.169,0.200) (0.207,0.487) (0.343,1.033) (0.228,2.233)
+Parameters optimization took 1 rounds (0.452 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.101781 sec (of wall-clock time) 0.197159 sec(of CPU time)
+Computing RapidNJ tree took 0.000428 sec (of wall-clock time) 0.000855 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -30203.517
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.698 second
+Computing log-likelihood of 98 initial trees ... 4.353 seconds
+Current best score: -30136.744
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -30136.596
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -30132.349
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -30129.808
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -30125.902
+Iteration 10 / LogL: -30126.287 / Time: 0h:0m:18s
+Iteration 20 / LogL: -30136.111 / Time: 0h:0m:28s
+Finish initializing candidate tree set (12)
+Current best tree score: -30125.902 / CPU time: 27.333
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -30125.917 / Time: 0h:0m:36s (0h:1m:34s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -30122.347
+Iteration 40 / LogL: -30126.650 / Time: 0h:0m:43s (0h:1m:45s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -30121.908
+Iteration 50 / LogL: -30125.936 / Time: 0h:0m:51s (0h:1m:38s left)
+Log-likelihood cutoff on original alignment: -30166.158
+Iteration 60 / LogL: -30124.008 / Time: 0h:0m:59s (0h:1m:24s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 70: -30121.733
+Iteration 70 / LogL: -30121.733 / Time: 0h:1m:6s (0h:1m:36s left)
+Iteration 80 / LogL: -30122.094 / Time: 0h:1m:13s (0h:1m:23s left)
+Iteration 90 / LogL: -30122.505 / Time: 0h:1m:19s (0h:1m:11s left)
+Iteration 100 / LogL: -30122.417 / Time: 0h:1m:26s (0h:1m:1s left)
+Log-likelihood cutoff on original alignment: -30165.702
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -30122.441 / Time: 0h:1m:33s (0h:1m:17s left)
+Iteration 120 / LogL: -30124.348 / Time: 0h:1m:41s (0h:1m:7s left)
+Iteration 130 / LogL: -30122.059 / Time: 0h:1m:48s (0h:0m:58s left)
+Iteration 140 / LogL: -30121.961 / Time: 0h:1m:55s (0h:0m:50s left)
+Iteration 150 / LogL: -30122.018 / Time: 0h:2m:3s (0h:0m:41s left)
+Log-likelihood cutoff on original alignment: -30165.702
+Iteration 160 / LogL: -30122.264 / Time: 0h:2m:10s (0h:0m:32s left)
+Iteration 170 / LogL: -30122.620 / Time: 0h:2m:17s (0h:0m:24s left)
+Iteration 180 / LogL: -30122.429 / Time: 0h:2m:25s (0h:0m:16s left)
+Iteration 190 / LogL: -30122.954 / Time: 0h:2m:32s (0h:0m:8s left)
+Iteration 200 / LogL: -30121.754 / Time: 0h:2m:39s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -30165.702
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+TREE SEARCH COMPLETED AFTER 200 ITERATIONS / Time: 0h:2m:39s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -30121.733
+2. Current log-likelihood: -30121.707
+3. Current log-likelihood: -30121.691
+Optimal log-likelihood: -30121.682
+Site proportion and rates:  (0.050,0.041) (0.171,0.194) (0.192,0.471) (0.360,1.010) (0.228,2.245)
+Parameters optimization took 3 rounds (1.252 sec)
+BEST SCORE FOUND : -30121.682
+Creating bootstrap support values...
+Split supports printed to NEXUS file /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.splits.nex
+Total tree length: 43.590
+
+Total number of iterations: 200
+CPU time used for tree search: 314.495 sec (0h:5m:14s)
+Wall-clock time used for tree search: 158.501 sec (0h:2m:38s)
+Total CPU time used: 319.212 sec (0h:5m:19s)
+Total wall-clock time used: 160.912 sec (0h:2m:40s)
+
+Computing bootstrap consensus tree...
+Reading input file /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.splits.nex...
+32 taxa and 253 splits.
+Consensus tree written to /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.contree
+Reading input trees file /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.contree
+Log-likelihood of consensus tree: -30123.296
+
+Analysis results written to: 
+  IQ-TREE report:                /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.iqtree
+  Maximum-likelihood tree:       /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.treefile
+  Likelihood distances:          /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.splits.nex
+  Consensus tree:                /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.contree
+  Screen log file:               /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas.log
+
+Date and Time: Wed Sep 21 22:48:12 2022

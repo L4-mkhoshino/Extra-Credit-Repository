@@ -1,0 +1,2 @@
+GT name	Candidates	Feasible	Saved	Score
+mygene.homologs.al.mid.treefile	1	1	1	86.5

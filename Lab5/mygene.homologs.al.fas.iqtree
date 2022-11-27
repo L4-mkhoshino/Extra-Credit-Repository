@@ -1,0 +1,335 @@
+IQ-TREE 2.1.1 COVID-edition built Aug 22 2020
+
+Input file name: /home/ec2-user/labs/lab5-L4-mkhoshino/mygene/mygene.homologs.al.fas
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 758925
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 32 sequences with 2497 amino-acid sites
+Number of constant sites: 1413 (= 56.5879% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 1413 (= 56.5879% of all sites)
+Number of parsimony informative sites: 436
+Number of distinct site patterns: 995
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: LG+R5
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+LG+R5            -30136.792   60411.584 - 7.65e-07   60415.564 -  2.7e-06   60813.360 +    0.956
+LG+R4            -30147.700   60429.400 - 1.03e-10   60433.151 -  4.1e-10   60819.531 -   0.0437
+LG+R6            -30136.345   60414.690 - 1.62e-07   60418.906 - 5.08e-07   60828.112 - 0.000598
+LG+I+G4          -30170.480   60466.961 - 7.22e-19   60470.275 - 3.56e-18   60833.800 - 3.48e-05
+LG+G4            -30178.355   60480.710 - 7.46e-22   60483.920 - 3.88e-21   60841.727 - 6.62e-07
+LG+R3            -30188.017   60506.035 - 2.36e-27   60509.564 - 1.05e-26   60884.520 - 3.37e-16
+LG+F+R5          -30103.709   60383.418 +    0.999   60389.923 +    0.999   60895.828 - 1.18e-18
+LG+F+R4          -30112.539   60397.078 -  0.00108   60403.287 -  0.00125   60897.842 - 4.32e-19
+rtREV+F+R5       -30192.991   60561.982 - 1.68e-39   60568.487 - 1.68e-39   61074.393 - 1.99e-57
+rtREV+F+R4       -30201.655   60575.311 - 2.14e-42   60581.520 - 2.48e-42   61076.075 - 8.56e-58
+VT+R4            -30282.784   60699.568 - 2.23e-69   60703.319 - 8.84e-69   61089.698 - 9.42e-61
+LG+R2            -30300.756   60727.512 - 1.91e-75   60730.827 -  9.4e-75   61094.352 -  9.2e-62
+VT+R5            -30278.208   60694.415 - 2.93e-68   60698.395 - 1.04e-67   61096.192 - 3.67e-62
+WAG+F+R4         -30232.994   60637.988 - 5.25e-56   60644.197 - 6.09e-56   61138.753 -  2.1e-71
+WAG+F+R5         -30226.904   60629.808 - 3.14e-54   60636.313 - 3.14e-54   61142.219 - 3.71e-72
+VT+F+R4          -30252.476   60676.951 - 1.82e-64   60683.160 - 2.11e-64   61177.716 - 7.27e-80
+WAG+R5           -30322.389   60782.778 -  1.9e-87   60786.758 - 6.73e-87   61184.554 - 2.38e-81
+WAG+R4           -30330.230   60794.459 - 5.53e-90   60798.211 - 2.19e-89   61184.590 - 2.34e-81
+VT+F+R5          -30248.537   60673.074 - 1.26e-63   60679.579 - 1.26e-63   61185.485 - 1.49e-81
+JTT+R5           -30342.158   60822.316 - 4.94e-96   60826.297 - 1.75e-95   61224.093 - 6.18e-90
+JTT+R4           -30352.651   60839.302 - 1.01e-99   60843.054 - 4.01e-99   61229.433 - 4.28e-91
+JTTDCMut+R5      -30347.821   60833.641 - 1.72e-98   60837.622 - 6.07e-98   61235.418 - 2.15e-92
+JTTDCMut+R4      -30358.419   60850.838 - 3.17e-102   60854.589 - 1.25e-101   61240.968 - 1.34e-93
+PMB+R4           -30374.957   60883.915 - 2.08e-109   60887.666 - 8.24e-109   61274.046 - 8.78e-101
+Blosum62+R4      -30376.273   60886.547 - 5.58e-110   60890.298 - 2.21e-109   61276.677 - 2.36e-101
+PMB+R5           -30372.870   60883.741 - 2.27e-109   60887.721 - 8.02e-109   61285.517 - 2.84e-103
+Blosum62+R5      -30373.168   60884.336 - 1.68e-109   60888.316 - 5.95e-109   61286.112 - 2.11e-103
+JTTDCMut+F+R5    -30300.328   60776.656 - 4.06e-86   60783.161 - 4.06e-86   61289.067 - 4.81e-104
+JTT+F+R5         -30300.620   60777.241 - 3.03e-86   60783.746 - 3.03e-86   61289.651 - 3.59e-104
+JTTDCMut+F+R4    -30310.254   60792.509 - 1.47e-89   60798.718 -  1.7e-89   61293.274 - 5.87e-105
+JTT+F+R4         -30310.504   60793.008 - 1.14e-89   60799.217 - 1.33e-89   61293.773 - 4.57e-105
+mtInv+F+R5       -30304.019   60784.039 - 1.01e-87   60790.544 - 1.01e-87   61296.449 - 1.2e-105
+mtInv+F+R4       -30318.624   60809.248 -  3.4e-93   60815.457 - 3.94e-93   61310.012 - 1.36e-108
+Blosum62+F+R4    -30331.094   60834.187 - 1.31e-98   60840.397 - 1.51e-98   61334.952 - 5.22e-114
+mtZOA+F+R5       -30325.819   60827.639 - 3.45e-97   60834.144 - 3.45e-97   61340.049 - 4.09e-115
+Blosum62+F+R5    -30328.301   60832.601 - 2.89e-98   60839.106 - 2.89e-98   61345.011 - 3.42e-116
+rtREV+R5         -30409.562   60957.123 - 2.64e-125   60961.104 - 9.31e-125   61358.900 - 3.3e-119
+cpREV+F+R5       -30335.259   60846.517 - 2.75e-101   60853.022 - 2.75e-101   61358.928 - 3.25e-119
+cpREV+F+R4       -30343.839   60859.677 - 3.81e-104   60865.886 - 4.42e-104   61360.442 - 1.52e-119
+mtZOA+F+R4       -30344.243   60860.485 - 2.54e-104   60866.694 - 2.95e-104   61361.250 - 1.02e-119
+rtREV+R4         -30421.224   60976.448 - 1.68e-129   60980.199 - 6.65e-129   61366.579 - 7.09e-121
+PMB+F+R4         -30356.726   60885.452 - 9.64e-110   60891.661 - 1.12e-109   61386.217 - 3.86e-125
+PMB+F+R5         -30354.671   60885.342 - 1.02e-109   60891.847 - 1.02e-109   61397.752 - 1.21e-127
+cpREV+R4         -30441.441   61016.882 - 2.78e-138   61020.634 - 1.1e-137   61407.013 - 1.18e-129
+cpREV+R5         -30434.137   61006.274 - 5.6e-136   61010.254 - 1.98e-135   61408.050 -   7e-130
+Dayhoff+F+R5     -30381.187   60938.374 - 3.11e-121   60944.879 - 3.11e-121   61450.785 - 3.67e-139
+DCMut+F+R5       -30381.544   60939.087 - 2.17e-121   60945.592 - 2.17e-121   61451.498 - 2.57e-139
+Dayhoff+F+R4     -30394.071   60960.142 - 5.83e-126   60966.351 - 6.76e-126   61460.906 - 2.33e-141
+DCMut+F+R4       -30394.333   60960.666 - 4.48e-126   60966.875 - 5.2e-126   61461.431 - 1.79e-141
+mtMet+F+R5       -30446.468   61068.936 - 1.38e-149   61075.441 - 1.38e-149   61581.346 - 1.64e-167
+mtMet+F+R4       -30464.215   61100.430 - 2.01e-156   61106.639 - 2.33e-156   61601.195 - 8.02e-172
+mtREV+F+R5       -30503.732   61183.465 - 1.87e-174   61189.970 - 1.87e-174   61695.875 - 2.21e-192
+mtART+F+R5       -30509.481   61194.962 - 5.96e-177   61201.467 - 5.95e-177   61707.373 - 7.05e-195
+mtREV+F+R4       -30519.847   61211.694 - 1.39e-180   61217.903 - 1.61e-180   61712.459 - 5.54e-196
+mtART+F+R4       -30530.605   61233.210 - 2.95e-185   61239.419 - 3.42e-185   61733.975 - 1.18e-200
+Dayhoff+R5       -30607.227   61352.454 - 3.77e-211   61356.434 - 1.33e-210   61754.230 - 4.71e-205
+DCMut+R5         -30607.562   61353.124 - 2.7e-211   61357.104 - 9.52e-211   61754.900 - 3.37e-205
+Dayhoff+R4       -30622.211   61378.422 - 8.65e-217   61382.173 - 3.43e-216   61768.552 - 3.66e-208
+DCMut+R4         -30622.467   61378.934 - 6.7e-217   61382.686 - 2.65e-216   61769.065 - 2.83e-208
+FLU+F+R5         -30554.746   61285.493 - 1.31e-196   61291.998 - 1.31e-196   61797.903 - 1.55e-214
+FLU+F+R4         -30572.344   61316.688 - 2.2e-203   61322.897 - 2.55e-203   61817.453 - 8.8e-219
+HIVb+F+R5        -30606.740   61389.480 - 3.43e-219   61395.985 - 3.43e-219   61901.891 - 4.06e-237
+HIVb+F+R4        -30625.136   61422.271 - 2.6e-226   61428.480 - 3.02e-226   61923.036 - 1.04e-241
+FLU+R5           -30759.413   61656.825 - 3.04e-277   61660.806 - 1.07e-276   62058.602 - 3.8e-271
+HIVb+R5          -30764.312   61666.625 - 2.26e-279   61670.605 -   8e-279   62068.401 - 2.83e-273
+FLU+R4           -30775.522   61685.043 - 2.27e-283   61688.795 - 8.97e-283   62075.174 - 9.57e-275
+HIVb+R4          -30782.929   61699.858 - 1.37e-286   61703.610 - 5.45e-286   62089.989 - 5.81e-278
+mtVer+F+R5       -30765.992   61707.985 - 2.36e-288   61714.490 - 2.36e-288   62220.395 - 2.8e-306
+mtVer+F+R4       -30782.405   61736.809 - 1.3e-294   61743.018 - 1.51e-294   62237.574 - 5.2e-310
+mtMAM+F+R5       -30881.873   61939.747 -        0   61946.252 -        0   62452.157 -        0
+mtMAM+F+R4       -30904.277   61980.554 -        0   61986.763 -        0   62481.319 -        0
+LG+I             -31169.582   62463.164 -        0   62466.374 -        0   62824.181 -        0
+mtZOA+R5         -31225.329   62588.658 -        0   62592.638 -        0   62990.434 -        0
+mtZOA+R4         -31236.914   62607.827 -        0   62611.579 -        0   62997.958 -        0
+LG               -31260.910   62643.820 -        0   62646.926 -        0   62999.013 -        0
+HIVw+F+R5        -31184.200   62544.400 -        0   62550.905 -        0   63056.810 -        0
+HIVw+F+R4        -31206.399   62584.798 -        0   62591.007 -        0   63085.563 -        0
+mtREV+R5         -31610.949   63359.897 -        0   63363.878 -        0   63761.674 -        0
+mtMet+R4         -31620.063   63374.126 -        0   63377.877 -        0   63764.257 -        0
+mtMet+R5         -31614.539   63367.079 -        0   63371.059 -        0   63768.855 -        0
+mtREV+R4         -31630.497   63394.995 -        0   63398.746 -        0   63785.125 -        0
+mtART+R5         -31707.315   63552.629 -        0   63556.609 -        0   63954.406 -        0
+mtART+R4         -31727.828   63589.655 -        0   63593.407 -        0   63979.786 -        0
+HIVw+R5          -31879.302   63896.603 -        0   63900.584 -        0   64298.380 -        0
+mtInv+R4         -31896.933   63927.867 -        0   63931.618 -        0   64317.998 -        0
+mtInv+R5         -31894.564   63927.127 -        0   63931.108 -        0   64328.904 -        0
+HIVw+R4          -31903.285   63940.569 -        0   63944.320 -        0   64330.700 -        0
+mtVer+R5         -31896.220   63930.440 -        0   63934.421 -        0   64332.217 -        0
+mtVer+R4         -31907.624   63949.248 -        0   63953.000 -        0   64339.379 -        0
+mtMAM+R5         -31987.088   64112.176 -        0   64116.157 -        0   64513.953 -        0
+mtMAM+R4         -32013.817   64161.635 -        0   64165.386 -        0   64551.765 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+R5
+
+State frequencies: (model)
+
+Model of rate heterogeneity: FreeRate with 5 categories
+Site proportion and rates:  (0.0496,0.0410) (0.1706,0.1937) (0.1923,0.4707) (0.3598,1.0097) (0.2276,2.2454)
+
+ Category  Relative_rate  Proportion
+  1         0.0410         0.0496
+  2         0.1937         0.1706
+  3         0.4707         0.1923
+  4         1.0097         0.3598
+  5         2.2454         0.2276
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -30121.6816 (s.e. 942.8358)
+Unconstrained log-likelihood (without tree): -14234.4284
+Number of free parameters (#branches + #model parameters): 69
+Akaike information criterion (AIC) score: 60381.3632
+Corrected Akaike information criterion (AICc) score: 60385.3434
+Bayesian information criterion (BIC) score: 60783.1395
+
+Total tree length (sum of branch lengths): 43.5903
+Sum of internal branch lengths: 9.3538 (21.4585% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Avaga.UJR31415.1_hypothetical_protein_I4U23_018908' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----------------------Avaga.UJR31415.1_hypothetical_protein_I4U23_018908
+|
+|  +---------------------Egranulosus.XP_024353854.1_Calciumbinding_mitochon
++--| (77)
+|  |      +-------------Egranulosus.XP_024348887.1_Calciumbinding_mitochon
+|  |   +--| (59)
+|  |   |  |       +--Avaga.UJR23030.1_hypothetical_protein_I4U23_026056
+|  |   |  +-------| (100)
+|  |   |          +--Avaga.UJR25868.1_hypothetical_protein_I4U23_007218
+|  +---| (44)
+|      |  +-------Egranulosus.XP_024349898.1_Calciumbinding_mitochon
+|      +--| (59)
+|         |                       +------------Hsapiens.NP_775908.2_mitochondrial_carrier_protein
+|         |                    +--| (100)
+|         |                    |  +--Hsapiens.NP_077008.2_calcium-binding_mitochondrial
+|         |                 +--| (91)
+|         |                 |  +--Hsapiens.NP_001317917.1_calcium-binding_mitochondr
+|         |              +--| (33)
+|         |              |  |  +--Hsapiens.NP_037518.3_calcium-binding_mitochondrial
+|         |              |  +--| (31)
+|         |              |     |         +----------------------Bbelcheri.LOC109467967_solute_carrier_family_25_me
+|         |              |     +---------| (100)
+|         |              |               |           +---------Egranulosus.XP_024353850.1_Solute_carrier_family_2
+|         |              |               |    +------| (100)
+|         |              |               |    |      |        +-----------Avaga.UJR35750.1_hypothetical_protein_I4U23_028499
+|         |              |               |    |      |     +--| (61)
+|         |              |               |    |      |     |  |        +--------Aplanci.LOC110984196_mitochondrial_coenzyme_A_tran
+|         |              |               |    |      |     |  |     +--| (85)
+|         |              |               |    |      |     |  |     |  +---Bbelcheri.LOC109468737_mitochondrial_coenzyme_A_tr
+|         |              |               |    |      |     |  |  +--| (88)
+|         |              |               |    |      |     |  |  |  +----Hsapiens.NP_848621.2_mitochondrial_coenzyme_A_tran
+|         |              |               |    |      |     |  +--| (78)
+|         |              |               |    |      |     |     +-----Myessoensis.XP_021355166.1_mitochondrial_coenzyme_
+|         |              |               |    |      |  +--| (69)
+|         |              |               |    |      |  |  +----Lanatina.XP_013386564.1_mitochondrial_coenzyme_A_t
+|         |              |               |    |      +--| (77)
+|         |              |               |    |         +--------Dmelanogaster.DPCoAC_dephosphocoenzyme_A_carrier_i
+|         |              |               +----| (99)
+|         |              |                    |             +-----------Aplanci.LOC110973531_graves_disease_carrier_protei
+|         |              |                    |          +--| (86)
+|         |              |                    |          |  +------Bbelcheri.LOC109481428_graves_disease_carrier_prot
+|         |              |                    |       +--| (93)
+|         |              |                    |       |  +-----Hsapiens.NP_689920.1_graves_disease_carrier_protei
+|         |              |                    |    +--| (90)
+|         |              |                    |    |  |  +------Lanatina.XP_013414919.1_graves_disease_carrier_pro
+|         |              |                    |    |  +--| (96)
+|         |              |                    |    |     +------Myessoensis.XP_021350602.1_graves_disease_carrier_
+|         |              |                    +----| (100)
+|         |              |                         +-------Cintestinalis.LOC100180500_graves_disease_carrier_
+|         |           +--| (66)
+|         |           |  |  +-----Cintestinalis.LOC100186688_uncharacterized_protein
+|         |           |  +--| (53)
+|         |           |     +--Aplanci.LOC110976327_calciumbinding_mitochondrial_
+|         |        +--| (71)
+|         |        |  +--Bbelcheri.LOC109482499_calciumbinding_mitochondria
+|         |     +--| (45)
+|         |     |  +-----Lanatina.XP_013394192.1_calciumbinding_mitochondri
+|         |  +--| (48)
+|         |  |  +--Myessoensis.XP_021372793.1_calciumbinding_mitochon
+|         +--| (67)
+|            +----Dmelanogaster.SCaMC_short_Calciumbinding_mitochond
+|
++------------Avaga.UJR13457.1_hypothetical_protein_I4U23_000471
+
+Tree in newick format:
+
+(Avaga.UJR31415.1_hypothetical_protein_I4U23_018908:3.0397281397,(Egranulosus.XP_024353854.1_Calciumbinding_mitochon:2.7241536859,((Egranulosus.XP_024348887.1_Calciumbinding_mitochon:1.7624792464,(Avaga.UJR23030.1_hypothetical_protein_I4U23_026056:0.1531496277,Avaga.UJR25868.1_hypothetical_protein_I4U23_007218:0.3739101567)100:1.0049060490)59:0.1528740414,(Egranulosus.XP_024349898.1_Calciumbinding_mitochon:1.1125376821,((((((((Hsapiens.NP_775908.2_mitochondrial_carrier_protein:1.6357015068,Hsapiens.NP_077008.2_calcium-binding_mitochondrial:0.1023114367)100:0.3396965151,Hsapiens.NP_001317917.1_calcium-binding_mitochondr:0.3998183458)91:0.1246782969,(Hsapiens.NP_037518.3_calcium-binding_mitochondrial:0.3680501291,(Bbelcheri.LOC109467967_solute_carrier_family_25_me:2.9188594516,((Egranulosus.XP_024353850.1_Solute_carrier_family_2:1.2549326606,(((Avaga.UJR35750.1_hypothetical_protein_I4U23_028499:1.5982216177,(((Aplanci.LOC110984196_mitochondrial_coenzyme_A_tran:1.2362538865,Bbelcheri.LOC109468737_mitochondrial_coenzyme_A_tr:0.6060868439)85:0.1721311782,Hsapiens.NP_848621.2_mitochondrial_coenzyme_A_tran:0.7188571869)88:0.2659972707,Myessoensis.XP_021355166.1_mitochondrial_coenzyme_:0.7966502142)78:0.1386123548)61:0.0741622619,Lanatina.XP_013386564.1_mitochondrial_coenzyme_A_t:0.6603002262)69:0.1159605722,Dmelanogaster.DPCoAC_dephosphocoenzyme_A_carrier_i:1.2238224963)77:0.2958775035)100:0.9730592779,((((Aplanci.LOC110973531_graves_disease_carrier_protei:1.5303134900,Bbelcheri.LOC109481428_graves_disease_carrier_prot:0.9550634676)86:0.1573038167,Hsapiens.NP_689920.1_graves_disease_carrier_protei:0.7930812155)93:0.1966680523,(Lanatina.XP_013414919.1_graves_disease_carrier_pro:0.8940027899,Myessoensis.XP_021350602.1_graves_disease_carrier_:0.8976890615)96:0.2735487182)90:0.0590610931,Cintestinalis.LOC100180500_graves_disease_carrier_:1.1066473367)100:0.7066408385)99:0.6192114572)100:1.3117408560)31:0.1700963977)33:0.2512170150,(Cintestinalis.LOC100186688_uncharacterized_protein:0.7985939162,Aplanci.LOC110976327_calciumbinding_mitochondrial_:0.4793543417)53:0.1549189458)66:0.1505181285,Bbelcheri.LOC109482499_calciumbinding_mitochondria:0.4582971472)71:0.1894730648,Lanatina.XP_013394192.1_calciumbinding_mitochondri:0.7977838516)45:0.0886117555,Myessoensis.XP_021372793.1_calciumbinding_mitochon:0.4323433483)48:0.1107307340,Dmelanogaster.SCaMC_short_Calciumbinding_mitochond:0.6781349582)67:0.2728102675)59:0.2277935898)44:0.4976035272)77:0.2579072707,Avaga.UJR13457.1_hypothetical_protein_I4U23_000471:1.7293201189);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -30123.296310
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++------------------------Avaga.UJR31415.1_hypothetical_protein_I4U23_018908
+|
+|  +---------------------Egranulosus.XP_024353854.1_Calciumbinding_mitochon
++--| (77)
+|  |      +-------------Egranulosus.XP_024348887.1_Calciumbinding_mitochon
+|  |   +--| (59)
+|  |   |  |       +--Avaga.UJR23030.1_hypothetical_protein_I4U23_026056
+|  |   |  +-------| (100)
+|  |   |          +--Avaga.UJR25868.1_hypothetical_protein_I4U23_007218
+|  +---| (44)
+|      |  +--------Egranulosus.XP_024349898.1_Calciumbinding_mitochon
+|      +--| (59)
+|         |                          +------------Hsapiens.NP_775908.2_mitochondrial_carrier_protein
+|         |                       +--| (100)
+|         |                       |  +--Hsapiens.NP_077008.2_calcium-binding_mitochondrial
+|         |                    +--| (91)
+|         |                    |  +--Hsapiens.NP_001317917.1_calcium-binding_mitochondr
+|         |                 +--| (65)
+|         |                 |  +---Hsapiens.NP_037518.3_calcium-binding_mitochondrial
+|         |              +--| (33)
+|         |              |  |          +-----------------------Bbelcheri.LOC109467967_solute_carrier_family_25_me
+|         |              |  +----------| (100)
+|         |              |             |            +---------Egranulosus.XP_024353850.1_Solute_carrier_family_2
+|         |              |             |    +-------| (100)
+|         |              |             |    |       |        +------------Avaga.UJR35750.1_hypothetical_protein_I4U23_028499
+|         |              |             |    |       |     +--| (61)
+|         |              |             |    |       |     |  |        +---------Aplanci.LOC110984196_mitochondrial_coenzyme_A_tran
+|         |              |             |    |       |     |  |     +--| (85)
+|         |              |             |    |       |     |  |     |  +----Bbelcheri.LOC109468737_mitochondrial_coenzyme_A_tr
+|         |              |             |    |       |     |  |  +--| (88)
+|         |              |             |    |       |     |  |  |  +-----Hsapiens.NP_848621.2_mitochondrial_coenzyme_A_tran
+|         |              |             |    |       |     |  +--| (78)
+|         |              |             |    |       |     |     +-----Myessoensis.XP_021355166.1_mitochondrial_coenzyme_
+|         |              |             |    |       |  +--| (69)
+|         |              |             |    |       |  |  +----Lanatina.XP_013386564.1_mitochondrial_coenzyme_A_t
+|         |              |             |    |       +--| (77)
+|         |              |             |    |          +---------Dmelanogaster.DPCoAC_dephosphocoenzyme_A_carrier_i
+|         |              |             +----| (99)
+|         |              |                  |             +-----------Aplanci.LOC110973531_graves_disease_carrier_protei
+|         |              |                  |          +--| (86)
+|         |              |                  |          |  +------Bbelcheri.LOC109481428_graves_disease_carrier_prot
+|         |              |                  |       +--| (93)
+|         |              |                  |       |  +-----Hsapiens.NP_689920.1_graves_disease_carrier_protei
+|         |              |                  |    +--| (90)
+|         |              |                  |    |  |  +------Lanatina.XP_013414919.1_graves_disease_carrier_pro
+|         |              |                  |    |  +--| (96)
+|         |              |                  |    |     +------Myessoensis.XP_021350602.1_graves_disease_carrier_
+|         |              |                  +----| (100)
+|         |              |                       +--------Cintestinalis.LOC100180500_graves_disease_carrier_
+|         |           +--| (66)
+|         |           |  |  +-----Cintestinalis.LOC100186688_uncharacterized_protein
+|         |           |  +--| (53)
+|         |           |     +---Aplanci.LOC110976327_calciumbinding_mitochondrial_
+|         |        +--| (71)
+|         |        |  +--Bbelcheri.LOC109482499_calciumbinding_mitochondria
+|         |     +--| (45)
+|         |     |  +-----Lanatina.XP_013394192.1_calciumbinding_mitochondri
+|         |  +--| (48)
+|         |  |  +--Myessoensis.XP_021372793.1_calciumbinding_mitochon
+|         +--| (67)
+|            +----Dmelanogaster.SCaMC_short_Calciumbinding_mitochond
+|
++-------------Avaga.UJR13457.1_hypothetical_protein_I4U23_000471
+
+
+Consensus tree in newick format: 
+
+(Avaga.UJR31415.1_hypothetical_protein_I4U23_018908:3.0432995675,(Egranulosus.XP_024353854.1_Calciumbinding_mitochon:2.7315764380,((Egranulosus.XP_024348887.1_Calciumbinding_mitochon:1.7700765669,(Avaga.UJR23030.1_hypothetical_protein_I4U23_026056:0.1533266293,Avaga.UJR25868.1_hypothetical_protein_I4U23_007218:0.3756119002)100:1.0060130934)59:0.1551199544,(Egranulosus.XP_024349898.1_Calciumbinding_mitochon:1.1174295158,(((((((((Hsapiens.NP_775908.2_mitochondrial_carrier_protein:1.6427733103,Hsapiens.NP_077008.2_calcium-binding_mitochondrial:0.0970344368)100:0.3392008266,Hsapiens.NP_001317917.1_calcium-binding_mitochondr:0.4067632619)91:0.1236196022,Hsapiens.NP_037518.3_calcium-binding_mitochondrial:0.5292176288)65:0.1613058156,(Bbelcheri.LOC109467967_solute_carrier_family_25_me:2.8910588800,((Egranulosus.XP_024353850.1_Solute_carrier_family_2:1.2601026745,(((Avaga.UJR35750.1_hypothetical_protein_I4U23_028499:1.5955477822,(((Aplanci.LOC110984196_mitochondrial_coenzyme_A_tran:1.2372564951,Bbelcheri.LOC109468737_mitochondrial_coenzyme_A_tr:0.6077172593)85:0.1728449937,Hsapiens.NP_848621.2_mitochondrial_coenzyme_A_tran:0.7189477401)88:0.2682256549,Myessoensis.XP_021355166.1_mitochondrial_coenzyme_:0.7946433378)78:0.1374242364)61:0.0768507945,Lanatina.XP_013386564.1_mitochondrial_coenzyme_A_t:0.6594349178)69:0.1183700218,Dmelanogaster.DPCoAC_dephosphocoenzyme_A_carrier_i:1.2175654534)77:0.2911877379)100:0.9739062423,((((Aplanci.LOC110973531_graves_disease_carrier_protei:1.5308114119,Bbelcheri.LOC109481428_graves_disease_carrier_prot:0.9533653449)86:0.1620335052,Hsapiens.NP_689920.1_graves_disease_carrier_protei:0.7899165113)93:0.1954571561,(Lanatina.XP_013414919.1_graves_disease_carrier_pro:0.8964534477,Myessoensis.XP_021350602.1_graves_disease_carrier_:0.8950074342)96:0.2758564086)90:0.0686976231,Cintestinalis.LOC100180500_graves_disease_carrier_:1.1009826881)100:0.6935279142)99:0.6393870453)100:1.3540693198)33:0.1047293157,(Cintestinalis.LOC100186688_uncharacterized_protein:0.7988640796,Aplanci.LOC110976327_calciumbinding_mitochondrial_:0.4813767800)53:0.1499884355)66:0.1533334771,Bbelcheri.LOC109482499_calciumbinding_mitochondria:0.4588043726)71:0.1898367552,Lanatina.XP_013394192.1_calciumbinding_mitochondri:0.8016028275)45:0.0904389975,Myessoensis.XP_021372793.1_calciumbinding_mitochon:0.4343992651)48:0.1075815592,Dmelanogaster.SCaMC_short_Calciumbinding_mitochond:0.6838231956)67:0.2710547048)59:0.2281597805)44:0.4980037963)77:0.2556787861,Avaga.UJR13457.1_hypothetical_protein_I4U23_000471:1.7318749999);
+
+TIME STAMP
+----------
+
+Date and time: Wed Sep 21 22:48:12 2022
+Total CPU time used: 319.212377 seconds (0h:5m:19s)
+Total wall-clock time used: 161.411248 seconds (0h:2m:41s)
+

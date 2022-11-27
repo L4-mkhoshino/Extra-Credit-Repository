@@ -1,0 +1,77 @@
+COST: 86.5
+
+
+Duplications
+Gene                L. Bound            U. Bound            
+=================== =================== =================== 
+n97                 Bilateria           N/A
+n65                 Bilateria           N/A
+n63                 Bilateria           N/A
+n61                 Bilateria           N/A
+n49                 Bilateria           N/A
+n47                 Bilateria           N/A
+n45                 Bilateria           N/A
+n43                 Bilateria           N/A
+n39                 Deuterostomia       Bilateria
+n60                 Bilateria           N/A
+n54                 Deuterostomia       Bilateria
+n96                 Bilateria           N/A
+n90                 Bilateria           N/A
+n84                 Protostomia         Bilateria
+n82                 Protostomia         Bilateria
+n78                 n173                Spiralia
+n76                 n173                Spiralia
+n68                 Avaga               n173
+n73                 Avaga               n173
+n95                 Hsapiens            n163
+n93                 Hsapiens            n163
+Duplications: 21 
+
+
+Losses
+Species             No. of Losses  
+=================== ============== 
+Cintestinalis       4
+Aplanci             7
+Hsapiens            2
+Spiralia            1
+Dmelanogaster       7
+Myessoensis         2
+Bilateria           0
+Lanatina            2
+Lophotrochozoa      3
+Deuterostomia       4
+Chordata            0
+n173                5
+Protostomia         5
+n163                4
+Avaga               2
+Bbelcheri           6
+Egranulosus         1
+
+Losses: 55
+
+
+Species             Duplications   cD_Nodes       Transfers_from Transfers_to   Losses         
+=================== ============== ============== ============== ============== ============== 
+Cintestinalis       0              0              0              0              4              
+Aplanci             0              0              0              0              7              
+Hsapiens            2              0              0              0              2              
+Spiralia            0              0              0              0              1              
+Dmelanogaster       0              0              0              0              7              
+Myessoensis         0              0              0              0              2              
+Bilateria           11             0              0              0              0              
+Lanatina            0              0              0              0              2              
+Lophotrochozoa      0              0              0              0              3              
+Deuterostomia       2              0              0              0              4              
+Chordata            0              0              0              0              0              
+n173                2              0              0              0              5              
+Protostomia         2              0              0              0              5              
+n163                0              0              0              0              4              
+Avaga               2              0              0              0              2              
+Bbelcheri           0              0              0              0              6              
+Egranulosus         0              0              0              0              1              
+
+Duplications: 21
+Losses: 55
+
