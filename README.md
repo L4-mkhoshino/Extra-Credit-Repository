@@ -130,19 +130,26 @@ This uses thirdkind to view the reconciled tree.
 ```bash
 mkdir ~/labs/lab8-$MYGIT/mygene
 ```
-
+This makes a mygene folder within the lab8 directory.
 ```bash
 cd ~/labs/lab8-$MYGIT/mygene
 ```
-
+This opens the mygene folder.
 ```bash
 sed 's/*//' ~/labs/lab4-$MYGIT/mygene/mygene.homologs.fas > ~/labs/lab8-$MYGIT/mygene/mygene.homologs.fas
 ```
-
+Using sed, we copy the raw unaligned sequence to the lab8 folder while also removing the stop codon. 
+```bash
+wget -O ~/data/Pfam_LE.tar.gz ftp://ftp.ncbi.nih.gov/pub/mmdb/cdd/little_endian/Pfam_LE.tar.gz && tar xfvz ~/data/Pfam_LE.tar.gz  -C ~/data
+```
+This downloads the pfam database.
 ```bash
 rpsblast -query ~/labs/lab8-$MYGIT/mygene/mygene.homologs.fas -db ~/data/Pfam -out ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out  -outfmt "6 qseqid qlen qstart qend evalue stitle" -evalue .0000000001
 ```
-
+This command runs the rps blast for the query sequence. This also uses an evalue of 0.0000000001.
+```sudo /usr/local/bin/Rscript  --vanilla ~/labs/lab8-$MYGIT/plotTreeAndDomains.r ~/labs/lab5-$MYGIT/mygene/mygene.homologs.al.mid.treefile ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out ~/labs/lab8-$MYGIT/mygene/mygene.tree.rps.pdf
+```
+This command uses ggtree to plot the phylogeny and drawProteins to plot the pfam domains on the phylogeny. This produces a pdf.
 ```bash
 mlr --inidx --ifs "\t" --opprint  cat ~/labs/lab8-$MYGIT/mygene/mygene.rps-blast.out | tail -n +2 | less -S
 ```
